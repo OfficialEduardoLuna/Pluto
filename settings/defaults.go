@@ -22,10 +22,10 @@ func coresDir() string {
 }
 
 func defaultSettings() Settings {
-	home, err := os.UserHomeDir()
-	if err != nil {
-		log.Fatalln(err)
-	}
+//	home, err := os.UserHomeDir()
+//	if err != nil {
+//		log.Fatalln(err)
+//	}
 
 	return Settings{
 		VideoFullscreen:   false,
@@ -75,11 +75,11 @@ func defaultSettings() Settings {
 		CoresDirectory:       coresDir(),
 		AssetsDirectory:      "./assets",
 		DatabaseDirectory:    "./database",
-		SavestatesDirectory:  filepath.Join(home, ".ludo", "savestates"),
-		SavefilesDirectory:   filepath.Join(home, ".ludo", "savefiles"),
-		ScreenshotsDirectory: filepath.Join(home, ".ludo", "screenshots"),
-		SystemDirectory:      filepath.Join(home, ".ludo", "system"),
-		PlaylistsDirectory:   filepath.Join(home, ".ludo", "playlists"),
-		ThumbnailsDirectory:  filepath.Join(home, ".ludo", "thumbnails"),
+		SavestatesDirectory:  "./dotludo/savestates",
+		SavefilesDirectory:   "./dotludo/savefiles",
+		ScreenshotsDirectory: "./dotludo/screenshots",
+		SystemDirectory:      "./dotludo/system",
+		PlaylistsDirectory:   "./dotludo/playlists",
+		ThumbnailsDirectory:  "./dotludo/thumbnails",
 	}
 }
