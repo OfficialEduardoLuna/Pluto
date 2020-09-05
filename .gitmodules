@@ -1,6 +1,6 @@
 [submodule "assets"]
 	path = assets
-	url = https://github.com/kivutar/ludo-assets.git
+	url = https://github.com/OfficialEduardoLuna/Pluto-assets
 	branch = master
 [submodule "database"]
 	path = database
