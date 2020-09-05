@@ -277,7 +277,7 @@ func (tabs sceneTabs) render() {
 			vid.Font.Printf(x-lw/2, float32(int(float32(h)/2+330*menu.ratio)), 0.4*menu.ratio, e.subLabel)
 		}
 
-		vid.DrawImage(menu.icons["hexagon"],
+		vid.DrawImage(menu.icons["square"],
 			x-220*e.scale*menu.ratio, float32(h)/2-220*e.scale*menu.ratio,
 			440*menu.ratio, 440*menu.ratio, e.scale, c)
 
