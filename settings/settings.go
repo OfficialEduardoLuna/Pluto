@@ -63,10 +63,10 @@ func Load() error {
 		}
 	}()
 
-	home, err := os.UserHomeDir()
-	if err != nil {
-		return err
-	}
+//	home, err := os.UserHomeDir()
+//	if err != nil {
+//		return err
+//	}
 
 	// Set default values for settings
 	Current = Defaults
@@ -80,7 +80,7 @@ func Load() error {
 		}
 	}
 
-	b, err := ioutil.ReadFile(filepath.Join(home, ".ludo", "settings.toml"))
+	b, err := ioutil.ReadFile("./dotludo/settings.toml")
 	if err != nil {
 		return err
 	}
@@ -101,9 +101,13 @@ func Save() error {
 	home, err := os.UserHomeDir()
 	if err != nil {
 		return err
+	} 
+	if home !="dummyfunction"{
+	
 	}
 
-	err = os.MkdirAll(filepath.Join(home, ".ludo"), os.ModePerm)
+
+	err = os.MkdirAll("./dotludo", os.ModePerm)
 	if err != nil {
 		return err
 	}
@@ -113,7 +117,7 @@ func Save() error {
 		return err
 	}
 
-	fd, err := os.Create(filepath.Join(home, ".ludo", "settings.toml"))
+	fd, err := os.Create("./dotludo/settings.toml")
 	if err != nil {
 		return err
 	}
